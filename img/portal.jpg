@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="240" viewBox="0 0 600 240">
+  <rect width="600" height="240" rx="32" fill="#123047"></rect>
+
+  <circle cx="125" cy="120" r="88" fill="#f5b642"></circle>
+
+  <path d="M51 139 75 91h99l28 48v25H51z" fill="#176b87"></path>
+  <path d="M82 96h82l20 38H62z" fill="#bce8f4"></path>
+
+  <rect x="47" y="129" width="160" height="42" rx="14" fill="#176b87"></rect>
+
+  <circle cx="80" cy="172" r="20" fill="#0a2234"></circle>
+  <circle cx="174" cy="172" r="20" fill="#0a2234"></circle>
+
+  <circle cx="80" cy="172" r="8" fill="#ffffff"></circle>
+  <circle cx="174" cy="172" r="8" fill="#ffffff"></circle>
+
+  <path d="m190 49 7 18 19 7-19 7-7 19-7-19-19-7 19-7z" fill="#ffffff"></path>
+
+  <text x="245" y="112" fill="#ffffff" font-family="Arial, sans-serif" font-size="50" font-weight="700" letter-spacing="3">
+    BRILHO
+  </text>
+
+  <text x="248" y="157" fill="#f5b642" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="9">
+    AUTO SPA
+  </text>
+</svg>

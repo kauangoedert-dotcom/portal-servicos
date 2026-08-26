@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brilho Auto Spa - Contato</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+      <img
+  src="https://api.iconify.design/mdi:car-wash.svg?color=%23f5b642"
+  alt="Logo de lava car"
+  width="100"
+>
+    <h1>Brilho Auto Spa</h1>
+    <p>Faça seu agendamento.</p>
+  </header>
+
+  <nav aria-label="Navegação principal">
+    <a href="index.html">Início</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="contato.html" aria-current="page">Contato</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Entre em contato</h2>
+      <p>Preencha os campos abaixo. O formulário ainda não envia dados para um servidor.</p>
+
+      <form action="#" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="assunto">Serviço desejado:</label>
+        <select id="assunto" name="assunto" required>
+          <option value="">Selecione</option>
+          <option value="lavagem-simples">Lavagem simples</option>
+          <option value="lavagem-completa">Lavagem completa</option>
+          <option value="enceramento">Enceramento</option>
+        </select>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto acadêmico - Programação Web</p>
+  </footer>
+</body>
+</html>
