@@ -18,9 +18,13 @@ header img {
 }
 
 nav {
-  background-color: #ffffff;
-  padding: 12px;
-  text-align: center;
+    background-color: #ffffff;
+    padding: 12px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav a {
@@ -49,6 +53,13 @@ article {
   margin-bottom: 18px;
   border: 1px solid #dddddd;
   border-radius: 8px;
+}
+
+.cards-servicos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 article h3 {
