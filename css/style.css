@@ -62,6 +62,19 @@ article {
   justify-content: space-between;
 }
 
+.lista-servicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card-servico {
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
 article h3 {
   color: #173d60;
 }
