@@ -2,15 +2,28 @@
 const servicos = [
   {
     nome: "Lavagem simples",
-    descricao: "Limpeza externa para remover a sujeira do dia a dia, incluindo lataria e pneus."
+    descricao: "Limpeza externa para remover a sujeira do dia a dia, incluindo lataria e pneus.",
+    categoria: "lavagem"
   },
   {
     nome: "Lavagem completa",
-    descricao: "Limpeza detalhada interna e externa, incluindo bancos, tapetes, painel e lataria."
+    descricao: "Limpeza detalhada interna e externa, incluindo bancos, tapetes, painel e lataria.",
+    categoria: "lavagem"
+  },
+  {
+    nome: "Higienização interna",
+    descricao: "Limpeza cuidadosa do painel, console, tapetes e demais superfícies internas.",
+    categoria: "higienizacao"
+  },
+  {
+    nome: "Higienização de bancos",
+    descricao: "Limpeza profunda dos bancos para remover manchas e odores do estofado.",
+    categoria: "higienizacao"
   },
   {
     nome: "Enceramento",
-    descricao: "Aplicação de cera para realçar o brilho e ajudar a proteger a pintura."
+    descricao: "Aplicação de cera para realçar o brilho e ajudar a proteger a pintura.",
+    categoria: "protecao"
   }
 ];
 
@@ -19,14 +32,20 @@ console.table(servicos);
 servicos.forEach((servico) => {
   console.log(servico.nome);
 });
+console.log(servicos[0].categoria);
 
 // Cria os cards do catálogo a partir dos dados do array.
 const listaServicos = document.querySelector("#listaServicos");
 
-function renderizarServicos() {
+function renderizarServicos(lista) {
   listaServicos.innerHTML = "";
 
-  servicos.forEach((servico) => {
+  if (lista.length === 0) {
+    listaServicos.textContent = "Nenhum serviço foi encontrado nesta categoria.";
+    return;
+  }
+
+  lista.forEach((servico) => {
     const card = document.createElement("article");
     card.classList.add("card-servico");
 
@@ -41,7 +60,30 @@ function renderizarServicos() {
   });
 }
 
-renderizarServicos();
+renderizarServicos(servicos);
+
+// Aula 11: filtra o catálogo sem recarregar a página.
+const filtroCategoria = document.querySelector("#filtroCategoria");
+const mensagemFiltro = document.querySelector("#mensagemFiltro");
+
+filtroCategoria.addEventListener("change", () => {
+  const categoriaEscolhida = filtroCategoria.value;
+  console.log(categoriaEscolhida);
+
+  if (categoriaEscolhida === "todos") {
+    renderizarServicos(servicos);
+    mensagemFiltro.textContent = "Mostrando todos os serviços.";
+    return;
+  }
+
+  const servicosFiltrados = servicos.filter((servico) => {
+    return servico.categoria === categoriaEscolhida;
+  });
+
+  renderizarServicos(servicosFiltrados);
+  mensagemFiltro.textContent =
+    servicosFiltrados.length + " serviço(s) encontrado(s).";
+});
 
 // Aula 08: consulta de orientação preservada.
 const campoServico = document.querySelector("#servico");

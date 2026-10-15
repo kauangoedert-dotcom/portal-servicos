@@ -9,11 +9,9 @@
 <body>
   <header>
     <img
-  
-    src="https://api.iconify.design/mdi/car-wash.svg?color=gold"
-   alt="Logo de lava car"
-   width="100"
-s
+      src="https://api.iconify.design/mdi/car-wash.svg?color=gold"
+      alt="Logo de lava car"
+      width="100"
     >
     <h1>Brilho Auto Spa</h1>
     <p>Serviços disponíveis para o seu carro.</p>
@@ -30,29 +28,14 @@ s
       <h2>Serviços disponíveis</h2>
       <p>Escolha uma das opções abaixo para cuidar do seu veículo.</p>
 
-      <div class="cards-servicos">
-        <article>
-          <h3>Lavagem simples</h3>
-          <p>Limpeza externa do veículo para remover a sujeira do dia a dia.</p>
-          <a href="contato.html">Solicitar agendamento</a>
-        </article>
-
-        <article>
-          <h3>Lavagem completa</h3>
-          <p>Limpeza externa e interna, incluindo bancos, tapetes, painel e lataria.</p>
-          <a href="contato.html">Solicitar agendamento</a>
-        </article>
-
-        <article>
-          <h3>Enceramento</h3>
-          <p>Aplicação de cera para realçar o brilho e ajudar a proteger a pintura.</p>
-          <a href="contato.html">Solicitar agendamento</a>
-        </article>
-      </div>
-    </section>
-
-    <section>
-      <h2>Catálogo de serviços</h2>
+      <label for="filtroCategoria">Filtrar serviços por categoria:</label>
+      <select id="filtroCategoria">
+        <option value="todos">Todos os serviços</option>
+        <option value="lavagem">Lavagem</option>
+        <option value="higienizacao">Higienização</option>
+        <option value="protecao">Proteção da pintura</option>
+      </select>
+      <p id="mensagemFiltro" aria-live="polite">Mostrando todos os serviços.</p>
       <div id="listaServicos" class="lista-servicos"></div>
     </section>
 
