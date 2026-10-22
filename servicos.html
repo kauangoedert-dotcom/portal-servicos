@@ -39,6 +39,21 @@
       <div id="listaServicos" class="lista-servicos"></div>
     </section>
 
+    <section class="preferencia">
+      <h2>Meu serviço favorito</h2>
+      <label for="servicoFavorito">Escolha um serviço:</label>
+      <select id="servicoFavorito">
+        <option value="">Selecione...</option>
+        <option value="lavagem-simples">Lavagem simples</option>
+        <option value="lavagem-completa">Lavagem completa</option>
+        <option value="higienizacao-interna">Higienização interna</option>
+        <option value="higienizacao-bancos">Higienização de bancos</option>
+        <option value="enceramento">Enceramento</option>
+      </select>
+      <button id="btnSalvarFavorito" type="button">Salvar favorito</button>
+      <p id="favoritoSalvo" aria-live="polite"></p>
+    </section>
+
     <section class="consulta-servico">
       <h2>Consulte um serviço</h2>
       <label for="servico">Escolha um serviço:</label>

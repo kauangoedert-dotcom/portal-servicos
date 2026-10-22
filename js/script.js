@@ -106,3 +106,29 @@ botaoConsultar.addEventListener("click", () => {
     resultado.textContent = "Serviço não identificado.";
   }
 });
+
+// Aula 13: salva e recupera a preferencia de servico neste navegador.
+const campoFavorito = document.querySelector("#servicoFavorito");
+const botaoFavorito = document.querySelector("#btnSalvarFavorito");
+const mensagemFavorito = document.querySelector("#favoritoSalvo");
+const favoritoSalvo = localStorage.getItem("servicoFavorito");
+const favoritoValido = Array.from(campoFavorito.options).some((opcao) => {
+  return opcao.value === favoritoSalvo;
+});
+
+if (favoritoSalvo && favoritoValido) {
+  campoFavorito.value = favoritoSalvo;
+  mensagemFavorito.textContent = `Seu serviço favorito é: ${campoFavorito.selectedOptions[0].textContent}.`;
+}
+
+botaoFavorito.addEventListener("click", () => {
+  const servico = campoFavorito.value;
+
+  if (servico === "") {
+    mensagemFavorito.textContent = "Escolha um serviço primeiro.";
+    return;
+  }
+
+  localStorage.setItem("servicoFavorito", servico);
+  mensagemFavorito.textContent = `Favorito salvo: ${campoFavorito.selectedOptions[0].textContent}.`;
+});
