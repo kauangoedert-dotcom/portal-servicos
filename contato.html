@@ -8,13 +8,11 @@
 </head>
 <body>
   <header>
-      <img
-  
-   src="https://api.iconify.design/mdi/car-wash.svg?color=gold"
-   alt="Logo de lava car"
-   width="100"
->
->
+    <img
+      src="https://api.iconify.design/mdi/car-wash.svg?color=gold"
+      alt="Logo de lava car"
+      width="100"
+    >
     <h1>Brilho Auto Spa</h1>
     <p>Faça seu agendamento.</p>
   </header>
@@ -28,9 +26,9 @@
   <main>
     <section>
       <h2>Entre em contato</h2>
-      <p>Preencha os campos abaixo. O formulário ainda não envia dados para um servidor.</p>
+      <p>Preencha os campos abaixo. A solicitação será validada nesta página e não será enviada para um servidor.</p>
 
-      <form action="#" method="post">
+      <form id="formContato" action="#" method="post">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required>
 
@@ -48,7 +46,8 @@
         <label for="mensagem">Mensagem:</label>
         <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-        <button type="submit">Enviar</button>
+        <button type="submit">Enviar solicitação</button>
+        <p id="mensagemForm" aria-live="polite"></p>
       </form>
     </section>
   </main>
@@ -56,5 +55,6 @@
   <footer>
     <p>Projeto acadêmico - Programação Web</p>
   </footer>
+  <script src="js/contato.js"></script>
 </body>
 </html>
